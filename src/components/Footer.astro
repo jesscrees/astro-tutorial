@@ -1,0 +1,36 @@
+---
+import Social from "./Social.astro";
+
+const platforms = [
+  {
+    domain: "github",
+    username: "jesscrees",
+  },
+  {
+    domain: "instagram",
+    username: "jesscrees",
+  },
+  {
+    domain: "bluesky",
+    username: "jesscrees",
+  },
+];
+---
+
+<style>
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+
+<footer>
+  {
+    platforms.map((platform) => (
+      <Social platform={platform.domain} username={platform.username} />
+    ))
+  }
+</footer>
